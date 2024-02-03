@@ -38,6 +38,9 @@ const About = () => {
               <li>
                 <strong>Виробник автомобільного мастила "Хадо"</strong>
               </li>
+              <li>
+                <strong>Металобаза "Металан Груп"</strong>
+              </li>
             </ul>
           </p>
         </article>

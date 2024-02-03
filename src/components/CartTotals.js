@@ -6,8 +6,9 @@ import { formatPrice } from "../utils/helpers";
 import { Link } from "react-router-dom";
 
 const CartTotals = () => {
-  const { total_amount, shipping_fee } = useCartContext();
+  const { cart, total_amount, shipping_fee, clearCart } = useCartContext();
   const { myUser, loginWithRedirect } = useUserContext();
+
   return (
     <Wrapper>
       <div>
@@ -23,21 +24,86 @@ const CartTotals = () => {
             Вартість : <span>{formatPrice(total_amount + shipping_fee)}</span>
           </h4>
         </article>
-        {myUser ? (
-          <Link to="/checkout" className="btn">
-            proceed to checkout
-          </Link>
-        ) : (
-          <button type="button" onClick={loginWithRedirect} className="btn">
-            login
+        <form
+          className="contact-form"
+          action="https://formspree.io/f/xrgwegeb"
+          method="POST"
+        >
+          {cart.map((item) => (
+            <input
+              key={item.id}
+              type="hidden"
+              name={`cartItems[${item.id}]`}
+              value={JSON.stringify({
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                quantity: item.amount,
+              })}
+            />
+          ))}
+          <input
+            type="tel"
+            className="form-input"
+            pattern="[\+]\d{3}\s*\d{2}\s*\d{3}\s*\d{2}\s*\d{2}"
+            placeholder="введіть ваш номер"
+            name="number"
+            id="number"
+            minlength="13"
+            maxlength="17"
+            required
+          />
+          <button type="submit" className="submit-btn">
+            замовити
           </button>
-        )}
+        </form>
+        <small>Формат: +380 ** *** ** **</small>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.section`
+  .contact-form {
+    /* width: 90vw; */
+    max-width: 500px;
+    min-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 20px;
+  }
+
+  .form-input,
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--clr-grey-8);
+  }
+  .form-input {
+    border-right: none;
+    color: var(--clr-grey-3);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+  }
+  .submit-btn {
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+  }
+  .form-input::placeholder {
+    color: var(--clr-black);
+    text-transform: capitalize;
+  }
+  .submit-btn {
+    background: var(--clr-primary-5);
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--clr-black);
+  }
+  .submit-btn:hover {
+    color: var(--clr-white);
+  }
   margin-top: 3rem;
   display: flex;
   justify-content: center;

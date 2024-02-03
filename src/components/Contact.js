@@ -19,8 +19,8 @@ const Contact = () => {
             <input
               type="tel"
               className="form-input"
-              pattern="\d*"
-              placeholder="введіть ваш номер"
+              pattern="[\+]\d{3}\s*\d{2}\s*\d{3}\s*\d{2}\s*\d{2}"
+              placeholder="+380"
               name="number"
               required
             />
