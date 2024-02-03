@@ -67,9 +67,10 @@ const Wrapper = styled.section`
   .contact-form {
     /* width: 90vw; */
     max-width: 500px;
-    min-width: 400px;
+    /* min-width: 400px; */
     display: grid;
     grid-template-columns: 1fr auto;
+    /* display: flex;*/
     padding-top: 20px;
   }
 
@@ -84,6 +85,7 @@ const Wrapper = styled.section`
     color: var(--clr-grey-3);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
+    /* width: 70%; */
   }
   .submit-btn {
     border-top-right-radius: var(--radius);
@@ -100,6 +102,7 @@ const Wrapper = styled.section`
     cursor: pointer;
     transition: var(--transition);
     color: var(--clr-black);
+    /* width: 30%; */
   }
   .submit-btn:hover {
     color: var(--clr-white);
@@ -127,8 +130,18 @@ const Wrapper = styled.section`
   @media (min-width: 776px) {
     justify-content: flex-end;
   }
+  @media (max-width: 500px) {
+    article {
+      padding: 1rem;
+      border: none;
+    }
+    h4,
+    p {
+      grid-template-columns: 110px 1fr;
+    }
+  }
   .btn {
-    width: 100%;
+    /* width: 100%; */
     margin-top: 1rem;
     text-align: center;
     font-weight: 700;
