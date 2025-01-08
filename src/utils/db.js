@@ -622,7 +622,7 @@ let products = [
     name: "будівельний вагончик 6х2.5",
     stock: 2,
     featured: true,
-    price: 12000000,
+    price: 13900000,
     image: product_5,
     images: [
       {
