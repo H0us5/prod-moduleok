@@ -39,6 +39,11 @@ const Wrapper = styled.section`
   .img-container {
     display: none;
   }
+  @media (max-width: 450px) {
+    .hero-btn {
+      margin-bottom: 1.8rem;
+    }
+    }
 
   p {
     line-height: 2;
