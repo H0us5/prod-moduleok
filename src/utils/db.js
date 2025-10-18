@@ -178,7 +178,7 @@ let products = [
     name: "дачний будинок",
     stock: 2,
     featured: true,
-    price: 20000000,
+    price: 28000000,
     image: product_2,
     images: [
       {
@@ -474,7 +474,7 @@ let products = [
     name: "будівельний вагончик 4х2.5",
     stock: 2,
     featured: true,
-    price: 10000000,
+    price: 12000000,
     image: product_4,
     images: [
       {
@@ -622,7 +622,7 @@ let products = [
     name: "будівельний вагончик 6х2.5",
     stock: 2,
     featured: true,
-    price: 13900000,
+    price: 14500000,
     image: product_5,
     images: [
       {
