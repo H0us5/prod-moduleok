@@ -1,5 +1,5 @@
 import React from "react";
-import { GiCompass, GiDiamondHard, GiStabbedNote } from "react-icons/gi";
+import { GiDiamondHard, GiStabbedNote } from "react-icons/gi";
 import { FiHome } from "react-icons/fi";
 export const links = [
   {

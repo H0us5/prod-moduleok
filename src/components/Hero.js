@@ -25,8 +25,8 @@ const Hero = () => {
         </Link>
       </article>
       <article className="img-container">
-        <img src={heroBcg} alt="nice table" className="main-img" />
-        <img src={heroBcg2} alt="person working" className="accent-img" />
+        <img src={heroBcg} alt="пост охорони" className="main-img" />
+        <img src={heroBcg2} alt="торговий павільйон" className="accent-img" />
       </article>
     </Wrapper>
   );
@@ -43,7 +43,7 @@ const Wrapper = styled.section`
     .hero-btn {
       margin-bottom: 1.8rem;
     }
-    }
+  }
 
   p {
     line-height: 2;
