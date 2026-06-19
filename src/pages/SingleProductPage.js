@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { formatPrice } from "../utils/helpers";
-import { Loading, ProductImages, AddToCart, PageHero } from "../components";
+import { Loading, Error, ProductImages, AddToCart, PageHero } from "../components";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -31,6 +31,9 @@ const SingleProduct = () => {
   }, [error]);
   if (loading) {
     return <Loading />;
+  }
+  if (error) {
+    return <Error />;
   }
   const { name, price, description, stock, id: sku, images } = product;
   return (
