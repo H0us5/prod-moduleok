@@ -37,10 +37,17 @@ const SingleProduct = () => {
     return <Error />;
   }
   const { name, price, description, stock, id: sku, images } = product;
+  const formattedName = name
+    ? name
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+    : "";
+
   return (
     <Wrapper>
-      <SEO title={name} description={description} />
-      <PageHero title={name} product />
+      <SEO title={formattedName} description={description} />
+      <PageHero title={formattedName} product />
       <div className="section section-center page">
         <Link to="/products" className="btn">
           назад до товарів
