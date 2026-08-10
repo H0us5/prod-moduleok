@@ -8,8 +8,8 @@ import { FilterProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
 import { HelmetProvider } from "react-helmet-async";
 
-const rootElement = document.getElementById("root");
-const app = (
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <HelmetProvider>
     <ProductsProvider>
       <FilterProvider>
@@ -20,10 +20,3 @@ const app = (
     </ProductsProvider>
   </HelmetProvider>
 );
-
-if (rootElement.hasChildNodes()) {
-  ReactDOM.hydrateRoot(rootElement, app);
-} else {
-  const root = ReactDOM.createRoot(rootElement);
-  root.render(app);
-}

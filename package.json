@@ -16,23 +16,15 @@
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
-    "react-snap": "^1.23.0",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "if [ \"$VERCEL\" != \"1\" ]; then react-snap; else echo 'Skipping react-snap on Vercel'; fi",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "netlify dev"
-  },
-  "reactSnap": {
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ]
   },
   "eslintConfig": {
     "extends": [
