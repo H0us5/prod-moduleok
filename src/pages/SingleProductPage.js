@@ -5,6 +5,7 @@ import { formatPrice } from "../utils/helpers";
 import { Loading, Error, ProductImages, AddToCart, PageHero } from "../components";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -38,6 +39,7 @@ const SingleProduct = () => {
   const { name, price, description, stock, id: sku, images } = product;
   return (
     <Wrapper>
+      <SEO title={name} description={description} />
       <PageHero title={name} product />
       <div className="section section-center page">
         <Link to="/products" className="btn">

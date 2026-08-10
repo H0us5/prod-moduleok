@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { ProductList, Sort, PageHero } from "../components";
+import SEO from "../components/SEO";
 
 const Products = () => {
   return (
     <main>
+      <SEO title="Товари" description="Каталог наших будівельних вагончиків, дач та битовок." />
       <PageHero title="товари" />
       <Wrapper className="page">
         <div className="section-center products">

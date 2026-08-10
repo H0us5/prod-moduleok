@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { PageHero } from "../components";
 import aboutImg from "../assets/about.jpg";
+import SEO from "../components/SEO";
 
 const About = () => {
   return (
     <main>
+      <SEO title="Про нас" description="Інформація про нашу компанію, яка займається виробництвом та продажем будівельних вагончиків та битовок у Харкові." />
       <PageHero title="про нас" />
       <Wrapper className="page section section-center">
         <img src={aboutImg} alt="вид на павільйон всередині" />
