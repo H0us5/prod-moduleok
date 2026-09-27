@@ -326,7 +326,7 @@ let products = [
     name: "пост охорони",
     stock: 2,
     featured: true,
-    price: 7900000,
+    price: 7500000,
     image: product_3,
     images: [
       {
@@ -474,7 +474,7 @@ let products = [
     name: "будівельний вагончик 4х2.5",
     stock: 2,
     featured: true,
-    price: 12000000,
+    price: 11500000,
     image: product_4,
     images: [
       {
@@ -622,7 +622,7 @@ let products = [
     name: "будівельний вагончик 6х2.5",
     stock: 2,
     featured: true,
-    price: 14500000,
+    price: 13900000,
     image: product_5,
     images: [
       {
